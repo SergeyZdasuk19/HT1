@@ -98,7 +98,7 @@ public class Phonebook {
 		{
 			// Обновляем запись о человеке в общем списке.
 			this.persons.put(person.getId(), person);
-			query2 = "UPDATE phone SET owner = '"+person.getId()+"' , '"+person.getPhone()+"' WHERE owner = '"+person.getId()+"'  ";
+			query2 = "UPDATE phone SET owner = '"+person.getId()+"' ,number =  '"+person.getPhone()+"' WHERE owner = '"+person.getId()+"'  ";
 			Integer affected_rows2 = this.db.changeDBData(query2);
 			//person.getPhones().put(person.getId(), person.getPhone());
 			person.getPhones().remove(person.getId());
